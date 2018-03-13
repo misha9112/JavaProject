@@ -9,15 +9,13 @@ import javax.swing.JTextArea;
 public class ParkFrame extends JFrame {
 	JPanel parkPanel;
 	JTextArea parkArea;
-
+	
 	public ParkFrame() {
 		setTitle("Main Frame");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+//		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(500, 200, 500, 500);
 		setResizable(false);
 		// setLayout(new FlowLayout());
-		
-		init();
 		
 		setLayout(new FlowLayout());
 
