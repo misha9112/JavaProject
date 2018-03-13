@@ -46,12 +46,13 @@ public class ParkFrame extends JFrame {
 	JButton inBtn;
 	JButton outBtn;
 
+	JTextArea parkArea;
+
 	public ParkFrame() {
-		setTitle("Main Frame");
+		setTitle("주차 입출 관리");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(500, 10, 500, 850);
 		setResizable(false);
-		// setLayout(new GridLayout());
 
 		init();
 
