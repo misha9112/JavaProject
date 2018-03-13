@@ -1,8 +1,10 @@
 package com.inc.project;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class ParkFrame extends JFrame {
+	JPanel parkPanel;
 	public ParkFrame() {
 		setTitle("Main Frame");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
