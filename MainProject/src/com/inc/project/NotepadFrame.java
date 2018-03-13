@@ -27,7 +27,6 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import memo_pro.NotepadFrame;
 
 public class NotepadFrame extends JFrame{
 
