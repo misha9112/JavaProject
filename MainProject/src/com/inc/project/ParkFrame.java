@@ -50,7 +50,6 @@ public class ParkFrame extends JFrame {
 
 	public ParkFrame() {
 		setTitle("주차 입출 관리");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(500, 10, 500, 850);
 		setResizable(false);
 
