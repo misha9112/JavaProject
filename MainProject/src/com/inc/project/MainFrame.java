@@ -44,9 +44,7 @@ public class MainFrame extends JFrame {
 		setTitle("Main Frame");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(300, 300, 500, 500);
-		setResizable(false);
-		// setLayout(new FlowLayout());
-		
+		setResizable(false);		
 
 		init();
 
