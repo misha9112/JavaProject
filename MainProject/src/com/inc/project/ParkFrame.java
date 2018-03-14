@@ -3,6 +3,8 @@ package com.inc.project;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -31,6 +33,10 @@ public class ParkFrame extends JFrame {
 	JPanel textPanel;
 	JTextArea entArea;
 
+	String seatNum;
+	String carNum;
+	List<String> seatNums = new ArrayList<>();
+
 	public ParkFrame() {
 		setTitle("주차 입출 관리");
 		setBounds(500, 200, 500, 500);
@@ -50,10 +56,15 @@ public class ParkFrame extends JFrame {
 		MouseAdapter ma = new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
-				if (((JButton) e.getComponent()).getText().equals(((JButton) e.getComponent()).getText())) {
+				if (((JButton) e.getComponent()).getText().length() == 1) {
 					new InputCarFrame(parkFrame).seatArea.setText(((JButton) e.getComponent()).getText());
+					seatNums.add(((JButton) e.getComponent()).getText());
+					seatNum = ((JButton) e.getComponent()).getText();
+				} else {
+					carNum = ((JButton) e.getComponent()).getText();
+					new OutputCarFrame(parkFrame);
 				}
-			} 
+			}
 		};
 
 		park1Btn.addMouseListener(ma);

@@ -20,17 +20,21 @@ public class OutputCarFrame extends JFrame {
 	JLabel fareLabel;
 
 	JTextArea numArea;
-	JTextArea seatArea; 
+	JTextArea seatArea;
 	JTextArea inArea;
 	JTextArea outArea;
 	JTextArea fareArea;
 
 	JButton outBtn;
 	JButton cancelBtn;
+	ParkFrame pf;
 
-	public OutputCarFrame() {
+	String str;
+
+	public OutputCarFrame(ParkFrame parkFrame) {
+		this.pf = parkFrame;
 		setTitle("출차");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setBounds(550, 300, 300, 300);
 		setResizable(false);
 
@@ -48,7 +52,54 @@ public class OutputCarFrame extends JFrame {
 		outBtn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
-				dispose();
+				if (seatArea.getText().equals("1")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park1Btn.setText(str);
+					dispose();
+				}
+				if (seatArea.getText().equals("2")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park2Btn.setText(str);
+					dispose();
+				}
+				if (seatArea.getText().equals("3")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park3Btn.setText(str);
+					dispose();
+				}
+				if (seatArea.getText().equals("4")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park4Btn.setText(str);
+					dispose();
+				}
+				if (seatArea.getText().equals("5")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park5Btn.setText(str);
+					dispose();
+				}
+				if (seatArea.getText().equals("6")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park6Btn.setText(str);
+					dispose();
+				}
+				if (seatArea.getText().equals("7")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park7Btn.setText(str);
+					dispose();
+				}
+				if (seatArea.getText().equals("8")) {
+					str = seatArea.getText();
+					System.out.println(str);
+					pf.park8Btn.setText(str);
+					dispose();
+				}
 			}
 		});
 
@@ -76,6 +127,9 @@ public class OutputCarFrame extends JFrame {
 		outArea = new JTextArea();
 		fareArea = new JTextArea();
 
+		numArea.setText(pf.carNum);
+		seatArea.setText(pf.seatNum);
+
 		outBtn = new JButton("출차");
 		cancelBtn = new JButton("취소");
 
@@ -98,10 +152,6 @@ public class OutputCarFrame extends JFrame {
 		outputPanel.add(cancelBtn);
 
 		add(outputPanel);
-	}
-
-	public static void main(String[] args) {
-		new OutputCarFrame();
 	}
 
 }
