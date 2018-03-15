@@ -4,6 +4,7 @@ import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.swing.JButton;
@@ -36,11 +37,16 @@ public class ParkFrame extends JFrame {
 	String seatNum;
 	String carNum;
 	List<String> seatNums = new ArrayList<>();
+	
+	// 입출차시간
+	Date inDate=new Date();
+	Date outDate=new Date();
 
 	public ParkFrame() {
 		setTitle("주차 입출 관리");
 		setBounds(500, 200, 500, 500);
 		setResizable(false);
+		System.out.println(inDate);
 
 		init();
 
@@ -62,7 +68,7 @@ public class ParkFrame extends JFrame {
 					seatNum = ((JButton) e.getComponent()).getText();
 				} else {
 					carNum = ((JButton) e.getComponent()).getText();
-					new OutputCarFrame(parkFrame);
+					new OutputCarFrame(parkFrame,inDate);
 				}
 			}
 		};
