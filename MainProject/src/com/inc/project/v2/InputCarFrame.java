@@ -66,6 +66,7 @@ public class InputCarFrame extends JFrame {
 					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
 					pf.park2Btn.setText(numField.getText());
 					pf.seatNums.set(1, numField.getText());
+					inDate = new Date();
 					dispose();
 				}
 
@@ -74,6 +75,7 @@ public class InputCarFrame extends JFrame {
 					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
 					pf.park3Btn.setText(numField.getText());
 					pf.seatNums.set(2, numField.getText());
+					inDate = new Date();
 					dispose();
 				}
 
@@ -82,6 +84,7 @@ public class InputCarFrame extends JFrame {
 					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
 					pf.park4Btn.setText(numField.getText());
 					pf.seatNums.set(3, numField.getText());
+					inDate = new Date();
 					dispose();
 				}
 
@@ -90,6 +93,7 @@ public class InputCarFrame extends JFrame {
 					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
 					pf.park5Btn.setText(numField.getText());
 					pf.seatNums.set(4, numField.getText());
+					inDate = new Date();
 					dispose();
 				}
 
@@ -98,6 +102,7 @@ public class InputCarFrame extends JFrame {
 					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
 					pf.park6Btn.setText(numField.getText());
 					pf.seatNums.set(5, numField.getText());
+					inDate = new Date();
 					dispose();
 				}
 
@@ -106,6 +111,7 @@ public class InputCarFrame extends JFrame {
 					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
 					pf.park7Btn.setText(numField.getText());
 					pf.seatNums.set(6, numField.getText());
+					inDate = new Date();
 					dispose();
 				}
 
@@ -114,6 +120,7 @@ public class InputCarFrame extends JFrame {
 					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
 					pf.park8Btn.setText(numField.getText());
 					pf.seatNums.set(7, numField.getText());
+					inDate = new Date();
 					dispose();
 				}
 

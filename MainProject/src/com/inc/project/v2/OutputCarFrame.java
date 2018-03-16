@@ -78,7 +78,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("1")) {
 					str = "1";
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate);
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park1Btn.setText(str);
 					pf.seatNums.set(0, "");
@@ -87,7 +87,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("2")) {
 					str = seatArea.getText();
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다");
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park2Btn.setText(str);
 					pf.seatNums.set(1, "");
@@ -96,7 +96,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("3")) {
 					str = seatArea.getText();
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다");
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park3Btn.setText(str);
 					pf.seatNums.set(2, "");
@@ -105,7 +105,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("4")) {
 					str = seatArea.getText();
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다");
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park4Btn.setText(str);
 					pf.seatNums.set(3, "");
@@ -114,7 +114,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("5")) {
 					str = seatArea.getText();
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다");
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park5Btn.setText(str);
 					pf.seatNums.set(4, "");
@@ -123,7 +123,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("6")) {
 					str = seatArea.getText();
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다");
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park6Btn.setText(str);
 					pf.seatNums.set(5, "");
@@ -132,7 +132,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("7")) {
 					str = seatArea.getText();
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다\n");
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park7Btn.setText(str);
 					pf.seatNums.set(6, "");
@@ -141,7 +141,7 @@ public class OutputCarFrame extends JFrame {
 				if (seatArea.getText().equals("8")) {
 					str = seatArea.getText();
 					str2= numArea.getText();
-					pf.entArea.append(str2+" 차량 출고 되었습니다");
+					pf.entArea.append(str2+" 차량 출고 되었습니다"+outDate+"\n");
 					System.out.println(str);
 					pf.park8Btn.setText(str);
 					pf.seatNums.set(7, "");

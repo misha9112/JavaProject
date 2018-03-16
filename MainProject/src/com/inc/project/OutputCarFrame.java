@@ -44,7 +44,6 @@ public class OutputCarFrame extends JFrame {
 		setBounds(550, 300, 300, 300);
 		setResizable(false);
 
-		System.out.println(icF);
 		init();
 
 		setVisible(true);

@@ -29,6 +29,8 @@ public class ParkFrame extends JFrame {
 	JButton park6Btn;
 	JButton park7Btn;
 	JButton park8Btn;
+	
+	int[] parkArray= {1,2,3,4,5,6,7,8};
 
 	// 입, 출, 요금
 	JPanel textPanel;
