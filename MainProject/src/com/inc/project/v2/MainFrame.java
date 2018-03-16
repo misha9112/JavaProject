@@ -27,7 +27,6 @@ public class MainFrame extends JFrame {
 	JMenu fileMenu;
 	JMenu editMenu;
 	JMenu helpMenu;
-	
 
 	JMenuItem parkItem;
 	JMenuItem noteItem;
@@ -44,7 +43,7 @@ public class MainFrame extends JFrame {
 		setTitle("Main Frame");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(300, 300, 500, 500);
-		setResizable(false);		
+		setResizable(false);
 
 		init();
 
@@ -58,21 +57,21 @@ public class MainFrame extends JFrame {
 
 	public void initEvent() {
 		parkItem.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				new ParkFrame();
 			}
 		});
 		noteItem.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				new NotepadFrame();
 			}
 		});
 		calcItem.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				new CalcFrame();
@@ -100,7 +99,7 @@ public class MainFrame extends JFrame {
 		fileMenu.add(parkItem);
 		fileMenu.add(noteItem);
 		fileMenu.add(calcItem);
-		
+
 		fileMenu.addSeparator();
 		fileMenu.add(exitItem);
 
