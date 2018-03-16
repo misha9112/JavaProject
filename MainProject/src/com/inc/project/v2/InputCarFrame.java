@@ -29,7 +29,7 @@ public class InputCarFrame extends JFrame {
 	Date inDate;
 
 	public InputCarFrame(ParkFrame parkFrame) {
-		this.pf = parkFrame; 
+		this.pf = parkFrame;
 
 		setTitle("입차");
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -52,8 +52,8 @@ public class InputCarFrame extends JFrame {
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				if (seatArea.getText().equals("1")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park1Btn.setText(numField.getText());
 					pf.seatNums.set(0, numField.getText());
 					inDate = new Date();
@@ -62,8 +62,8 @@ public class InputCarFrame extends JFrame {
 				}
 
 				if (seatArea.getText().equals("2")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park2Btn.setText(numField.getText());
 					pf.seatNums.set(1, numField.getText());
 					inDate = new Date();
@@ -71,8 +71,8 @@ public class InputCarFrame extends JFrame {
 				}
 
 				if (seatArea.getText().equals("3")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park3Btn.setText(numField.getText());
 					pf.seatNums.set(2, numField.getText());
 					inDate = new Date();
@@ -80,8 +80,8 @@ public class InputCarFrame extends JFrame {
 				}
 
 				if (seatArea.getText().equals("4")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park4Btn.setText(numField.getText());
 					pf.seatNums.set(3, numField.getText());
 					inDate = new Date();
@@ -89,8 +89,8 @@ public class InputCarFrame extends JFrame {
 				}
 
 				if (seatArea.getText().equals("5")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park5Btn.setText(numField.getText());
 					pf.seatNums.set(4, numField.getText());
 					inDate = new Date();
@@ -98,8 +98,8 @@ public class InputCarFrame extends JFrame {
 				}
 
 				if (seatArea.getText().equals("6")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park6Btn.setText(numField.getText());
 					pf.seatNums.set(5, numField.getText());
 					inDate = new Date();
@@ -107,8 +107,8 @@ public class InputCarFrame extends JFrame {
 				}
 
 				if (seatArea.getText().equals("7")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park7Btn.setText(numField.getText());
 					pf.seatNums.set(6, numField.getText());
 					inDate = new Date();
@@ -116,8 +116,8 @@ public class InputCarFrame extends JFrame {
 				}
 
 				if (seatArea.getText().equals("8")) {
-					str2= numField.getText();
-					pf.entArea.append(str2+" 차량 입고 되었습니다\n");
+					str2 = numField.getText();
+					pf.entArea.append(str2 + " 차량 입고 되었습니다\n");
 					pf.park8Btn.setText(numField.getText());
 					pf.seatNums.set(7, numField.getText());
 					inDate = new Date();

@@ -16,28 +16,26 @@ import javax.swing.JTextArea;
 public class ParkFrame extends JFrame {
 	ParkFrame parkFrame = this;
 	JPanel mainPanel;
-	//To. 현민씨에게
-	
-	//버그의 원인은 일단 문자열을 비교하는데 seatNum이라는 변수가 계속 변경되니까 그 변수로 차고번호를 지정해버려서
-	//차고번호가 제일 마지막에 설정한 변수로 고정돼버리는겁니다.
-	
-	//버그픽스의 원리는 그거임 배열로써서 차고에 1번부터 8번이있으면 0번부터 7번 인덱스가 있을거아니겠습니까
-	//그럼 차고에 해당하는 숫자 -1이 인덱스니까 거따가 차번호집어넣고 나중에 indexOf로 해당 인덱스 찾아와서
-	//input에서 아마 버그나는 차고번호를 집어넣게 했을거임 그럼 버그안날거라 생각했고 실제로 고쳐졌구요
-	//Output에서는 배열을 삭제하면 어레이아웃오브인덱스 예외가뜰거고 왜냐? 지금 배열의크기는 차고에 맞게 이닛
-	//컴포넌트에서 설정해놨음 따라서 마지막에 출차하고 
-	//add가 아닌 set 인덱스번호로 들어가서 값을 ""을 주면댑니다 (널은 절대 안됨) 이건 이미 했구요
-	
-	//남은게 추측해보자면
-	
+	// To. 현민씨에게
+
+	// 버그의 원인은 일단 문자열을 비교하는데 seatNum이라는 변수가 계속 변경되니까 그 변수로 차고번호를 지정해버려서
+	// 차고번호가 제일 마지막에 설정한 변수로 고정돼버리는겁니다.
+
+	// 버그픽스의 원리는 그거임 배열로써서 차고에 1번부터 8번이있으면 0번부터 7번 인덱스가 있을거아니겠습니까
+	// 그럼 차고에 해당하는 숫자 -1이 인덱스니까 거따가 차번호집어넣고 나중에 indexOf로 해당 인덱스 찾아와서
+	// input에서 아마 버그나는 차고번호를 집어넣게 했을거임 그럼 버그안날거라 생각했고 실제로 고쳐졌구요
+	// Output에서는 배열을 삭제하면 어레이아웃오브인덱스 예외가뜰거고 왜냐? 지금 배열의크기는 차고에 맞게 이닛
+	// 컴포넌트에서 설정해놨음 따라서 마지막에 출차하고
+	// add가 아닌 set 인덱스번호로 들어가서 값을 ""을 주면댑니다 (널은 절대 안됨) 이건 이미 했구요
+
+	// 남은게 추측해보자면
+
 	// 1. 1번을 제외한 차고에 시간을 표시하게 하기
 	// 2. Input과 Output의 조건을 배열의 인덱스 조건비교로 설정해서 이벤트리스너 하드코딩을 압축하세요
 	// 아마 이건 진혁씨가 보면 딱 할줄아실겁니다
-	
-	//전 휴가니까 도망갑니다 ^^ 이정도했으면 제할일은 했다고봅니다
-	
-	
-	
+
+	// 전 휴가니까 도망갑니다 ^^ 이정도했으면 제할일은 했다고봅니다
+
 	// 주차 공간
 	JPanel parkPanel;
 	JPanel pPanel;
@@ -58,14 +56,14 @@ public class ParkFrame extends JFrame {
 	String seatNum;
 	String carNum;
 	ArrayList<String> seatNums = new ArrayList<>();
-	
+
 	// 입출차시간
-	Date inDate=new Date();
-	Date outDate=new Date();
+	Date inDate = new Date();
+	Date outDate = new Date();
 
 	public ParkFrame() {
 		setTitle("주차 입출 관리");
-		setBounds(500, 200, 500, 500);
+		setBounds(500, 200, 500, 280);
 		setResizable(false);
 		System.out.println(inDate);
 
@@ -87,18 +85,16 @@ public class ParkFrame extends JFrame {
 					System.out.println(Integer.parseInt((((JButton) e.getComponent()).getText())) - 1);
 					seatNum = seatNums.get(Integer.parseInt((((JButton) e.getComponent()).getText())) - 1);
 					new InputCarFrame(parkFrame).seatArea.setText(((JButton) e.getComponent()).getText());
-					
+
 				} else {
 					carNum = ((JButton) e.getComponent()).getText();
 					System.out.println(carNum);
 					seatNums.set(seatNums.indexOf(carNum) + 1, carNum);
-					new OutputCarFrame(parkFrame,inDate).seatArea.setText(seatNums.indexOf(carNum) + 1 + "");
-					
+					new OutputCarFrame(parkFrame, inDate).seatArea.setText(seatNums.indexOf(carNum) + 1 + "");
+
 				}
 			}
 		};
-		
-	
 
 		park1Btn.addMouseListener(ma);
 		park2Btn.addMouseListener(ma);
@@ -117,8 +113,8 @@ public class ParkFrame extends JFrame {
 
 	public void ptPanel() {
 		mainPanel = new JPanel();
-		//seatnums 배열 초기화 // 차고 추가시 i 늘리기바람
-		for(int i = 0; i < 8; i++) {
+		// seatnums 배열 초기화 // 차고 추가시 i 늘리기바람
+		for (int i = 0; i < 8; i++) {
 			seatNums.add(i, "");
 		}
 
